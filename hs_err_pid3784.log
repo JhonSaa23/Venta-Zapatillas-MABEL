@@ -1,0 +1,213 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:44), pid=3784, tid=18056
+#
+# JRE version:  (17.0.6) (build )
+# Java VM: OpenJDK 64-Bit Server VM (17.0.6+0-b2043.56-10027231, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: 
+
+Host: 12th Gen Intel(R) Core(TM) i7-12700H, 20 cores, 7G,  Windows 11 , 64 bit Build 22621 (10.0.22621.2506)
+Time: Fri Dec 15 17:22:25 2023 Hora est. Pacífico, Sudamérica elapsed time: 0.011600 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001d98c3e27e0):  JavaThread "Unknown thread" [_thread_in_vm, id=18056, stack(0x0000002478200000,0x0000002478300000)]
+
+Stack: [0x0000002478200000,0x0000002478300000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x683c9a]
+V  [jvm.dll+0x8427a4]
+V  [jvm.dll+0x843f9e]
+V  [jvm.dll+0x844603]
+V  [jvm.dll+0x249b75]
+V  [jvm.dll+0xa641f]
+V  [jvm.dll+0x2db8c4]
+V  [jvm.dll+0x81405c]
+V  [jvm.dll+0x36e6a1]
+V  [jvm.dll+0x7f35cc]
+V  [jvm.dll+0x3f0e8f]
+V  [jvm.dll+0x3f29d1]
+C  [jli.dll+0x526b]
+C  [ucrtbase.dll+0x29363]
+C  [KERNEL32.DLL+0x1257d]
+C  [ntdll.dll+0x5aa58]
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007fff2764c058, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x000001d98c3e27e0 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=18056, stack(0x0000002478200000,0x0000002478300000)]
+
+Threads with active compile tasks:
+
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x0000000000000000, size: 0 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 0.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+<Empty>
+
+GC Heap History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.007 Loaded shared library C:\Program Files\Android\Android Studio\jbr\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff6eebf0000 - 0x00007ff6eebfa000 	C:\Program Files\Android\Android Studio\jbr\bin\java.EXE
+0x000001d989d40000 - 0x000001d989f57000 	C:\WINDOWS\SYSTEM32\ntd1l.dll
+0x000001d989f60000 - 0x000001d98a024000 	C:\WINDOWS\System32\kern3l32.dll
+0x00007fffdd0f0000 - 0x00007fffdd307000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007fffdc220000 - 0x00007fffdc2e4000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007fffda9f0000 - 0x00007fffdad95000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007fffd9ec0000 - 0x00007fffda0f1000 	C:\Program Files\SentinelOne\Sentinel Agent 22.2.4.558\InProcessClient64.dll
+0x00007fffdc670000 - 0x00007fffdc721000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007fffdc730000 - 0x00007fffdc7d7000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007fffdae40000 - 0x00007fffdaee6000 	C:\WINDOWS\System32\sechost.dll
+0x00007fffdca00000 - 0x00007fffdcb17000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007fffda8d0000 - 0x00007fffda9e1000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007fffc4630000 - 0x00007fffc4647000 	C:\Program Files\Android\Android Studio\jbr\bin\jli.dll
+0x00007fffc4610000 - 0x00007fffc462b000 	C:\Program Files\Android\Android Studio\jbr\bin\VCRUNTIME140.dll
+0x00007fffdc390000 - 0x00007fffdc53e000 	C:\WINDOWS\System32\USER32.dll
+0x00007fffda690000 - 0x00007fffda6b6000 	C:\WINDOWS\System32\win32u.dll
+0x00007fffdc8e0000 - 0x00007fffdc909000 	C:\WINDOWS\System32\GDI32.dll
+0x00007fffab450000 - 0x00007fffab6e3000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.2506_none_270c5ae97388e100\COMCTL32.dll
+0x00007fffda6c0000 - 0x00007fffda7d9000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007fffdada0000 - 0x00007fffdae3a000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007fffd9eb0000 - 0x00007fffd9eba000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007fffdb050000 - 0x00007fffdb081000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007fffd46c0000 - 0x00007fffd46cc000 	C:\Program Files\Android\Android Studio\jbr\bin\vcruntime140_1.dll
+0x00007fff562c0000 - 0x00007fff5634d000 	C:\Program Files\Android\Android Studio\jbr\bin\msvcp140.dll
+0x00007fff26b10000 - 0x00007fff2777e000 	C:\Program Files\Android\Android Studio\jbr\bin\server\jvm.dll
+0x00007fffbcc70000 - 0x00007fffbcc79000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007fffdc5f0000 - 0x00007fffdc661000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007fffd3620000 - 0x00007fffd3654000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007fffd92d0000 - 0x00007fffd92e8000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007fffc7560000 - 0x00007fffc756a000 	C:\Program Files\Android\Android Studio\jbr\bin\jimage.dll
+0x00007fffd4a60000 - 0x00007fffd4c93000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007fffdcd20000 - 0x00007fffdd0a9000 	C:\WINDOWS\System32\combase.dll
+0x00007fffdc910000 - 0x00007fffdc9e7000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007fffccc80000 - 0x00007fffcccb2000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007fffda850000 - 0x00007fffda8ca000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007fffc0de0000 - 0x00007fffc0e05000 	C:\Program Files\Android\Android Studio\jbr\bin\java.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Android\Android Studio\jbr\bin;C:\WINDOWS\SYSTEM32;C:\Program Files\SentinelOne\Sentinel Agent 22.2.4.558;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.2506_none_270c5ae97388e100;C:\Program Files\Android\Android Studio\jbr\bin\server
+
+VM Arguments:
+java_command: <unknown>
+java_class_path (initial): <not set>
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 12                                        {product} {ergonomic}
+     uint ConcGCThreads                            = 4                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 15                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 130023424                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MaxHeapSize                              = 2071986176                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 7602480                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122027880                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122027880                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 2071986176                             {manageable} {ergonomic}
+     bool UseCompressedClassPointers               = true                           {product lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+PATH=C:\Program Files\Common Files\Oracle\Java\javapath;C:\app\Alumno\product\21c\dbhomeXE\bin;C:\Program Files (x86)\VMware\VMware Workstation\bin\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\xampp\php;C:\composer;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files\Azure Data Studio\bin;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\dotnet\;C:\Users\Alumno\AppData\Local\Microsoft\WindowsApps;C:\Users\Alumno\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Alumno\AppData\Roaming\Composer\vendor\bin;C:\Users\Alumno\AppData\Roaming\npm;C:\Program Files\Azure Data Studio\bin;C:\Program Files\MongoDB\Server\6.0\bin;C:\Users\Alumno\.dotnet\tools;D:\flutter\bin;C:\Users\Alumno\AppData\Local\GitHubDesktop\bin;D:\flutter\bin\mingit\cmd;D:\flutter\bin\mingit\cmd
+USERNAME=Alumno
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 154 Stepping 3, GenuineIntel
+TMP=C:\Users\Alumno\AppData\Local\Temp
+TEMP=C:\Users\Alumno\AppData\Local\Temp
+
+
+JNI global refs:
+
+[error occurred during error reporting (JNI global references), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007fff26bc7a10]
+
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 22621 (10.0.22621.2506)
+OS uptime: 8 days 1:39 hours
+Hyper-V role detected
+
+CPU: total 20 (initial active 20) (10 cores per cpu, 2 threads per core) family 6 model 154 stepping 3 microcode 0x41f, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, sha, fma, vzeroupper, clflush, clflushopt, clwb, hv
+
+Memory: 4k page, system-wide physical 7896M (505M free)
+TotalPageFile size 32472M (AvailPageFile size 5M)
+current process WorkingSet (physical memory assigned to process): 17M, peak: 17M
+current process commit charge ("private bytes"): 27M, peak: 28M
+
+vm_info: OpenJDK 64-Bit Server VM (17.0.6+0-b2043.56-10027231) for windows-amd64 JRE (17.0.6+0-b2043.56-10027231), built on Apr 28 2023 00:43:19 by "androidbuild" with MS VC++ 16.10 / 16.11 (VS2019)
+
+END.
